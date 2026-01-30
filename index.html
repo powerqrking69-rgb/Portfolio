@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Power | Discord Community Manager</title>
-  <meta name="description" content="Power – Expert in managing and growing Discord communities with professional strategies." />
+  <meta name="description" content="Power – Professional Discord community manager." />
   <meta name="author" content="Power" />
+
   <style>
     html { scroll-behavior: smooth; }
     * { margin:0; padding:0; box-sizing:border-box; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
@@ -28,15 +29,15 @@
       z-index: 1000;
       box-shadow: 0 0 5px #00000055;
     }
-    nav .logo { font-weight: bold; font-size: 1.5rem; color: #ffffff; }
+    nav .logo { font-weight: bold; font-size: 1.5rem; }
     nav ul { display: flex; list-style:none; gap: 1.5rem; }
-    nav ul li a { color: #e5e5e5; text-decoration: none; font-weight: 500; transition: 0.3s; }
+    nav ul li a { color: #e5e5e5; text-decoration: none; }
     nav ul li a:hover { color: #ffffff; }
 
-    /* MOBILE NAVBAR */
+    /* Mobile navbar */
     @media(max-width:768px){
-      nav ul { display: none; } /* Hide menu links */
-      nav .contact-mobile { display: block; color: #e5e5e5; text-decoration: none; font-weight: 500; }
+      nav ul { display: none; }
+      nav .contact-mobile { display: block; color:#e5e5e5; text-decoration:none; }
     }
     @media(min-width:769px){
       nav .contact-mobile { display: none; }
@@ -52,168 +53,186 @@
       text-align:center;
       padding:1.5rem 2rem;
     }
-    header img { width:150px; height:150px; border-radius:50%; margin-bottom:1rem; object-fit:cover; border: 3px solid #ffffff; }
-    header h1 { font-size:3rem; margin-bottom:0.8rem; color:#ffffff; }
+    header img {
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      margin-bottom:1rem;
+      object-fit:cover;
+      border:3px solid #ffffff;
+    }
+    header h1 { font-size:3rem; margin-bottom:0.8rem; }
     header span { color:#cccccc; }
-    header p { max-width:600px; margin:auto; color:#aaaaaa; font-size:1.1rem; }
+    header p { max-width:600px; color:#aaaaaa; }
 
-    section { max-width:1000px; margin:auto; padding:2rem 2rem; }
-    h2 { font-size:2.2rem; margin-bottom:1rem; color:#ffffff; text-align:center; }
+    section { max-width:1000px; margin:auto; padding:2rem; }
+    h2 { text-align:center; font-size:2.2rem; margin-bottom:1rem; }
+
     .card {
       background: rgba(30,30,30,0.95);
       padding:1.5rem;
       border-radius:18px;
       box-shadow: 0 0 5px #00000055;
       margin-bottom:1.5rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 0 10px #55555555; }
-    ul { list-style:none; }
-    li { padding:0.6rem 0; border-bottom:1px solid #44444455; color:#cccccc; }
-    li:last-child { border-bottom:none; }
-
-    .buttons a { display:inline-block; margin:0.8rem 0.5rem 0 0; padding:0.7rem 1.4rem; background:#222222; color:#ffffff; text-decoration:none; font-weight:600; border-radius:999px; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 0 3px #00000055; }
-    .buttons a.secondary { background:transparent; color:#ffffff; border:2px solid #ffffff; }
-    .buttons a:hover { transform:translateY(-2px); box-shadow:0 0 6px #88888855; }
-
-    footer { text-align:center; padding:1.5rem; color:#aaaaaa; font-size:0.9rem; }
-
-    @media(max-width:600px){
-      header h1{font-size:2.2rem;}
-      h2{font-size:1.8rem;}
-      section {padding:2rem 1rem;}
     }
 
-    .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;}
+    .services-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1.5rem;
+    }
     @media(max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
+
+    ul { list-style:none; }
+    li { padding:0.6rem 0; border-bottom:1px solid #44444455; }
+    li:last-child { border-bottom:none; }
+
+    footer {
+      text-align:center;
+      padding:1.5rem;
+      color:#aaaaaa;
+      font-size:0.9rem;
+    }
+
+    /* CONTACT BOX */
+    .contact-box {
+      background: rgba(20,20,20,0.95);
+      border: 1px solid #333;
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .contact-box h3 {
+      margin-bottom: 1rem;
+    }
+    .contact-box p {
+      color: #cccccc;
+      margin-bottom: 0.8rem;
+    }
+    .contact-box a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">Power</div>
-    <!-- Desktop menu -->
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#communities">Communities</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <!-- Mobile contact link -->
-    <a href="#contact" class="contact-mobile">Contact</a>
-  </nav>
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">Power</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#communities">Communities</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="contact-mobile">Contact</a>
+</nav>
 
-  <!-- HERO -->
-  <header>
-    <img src="https://cdn.discordapp.com/attachments/1405788974198296629/1466858220059361503/ca75ca1ab8d338ed603861f05833fa10.jpg?ex=697e45ac&is=697cf42c&hm=9e6b8294bdbf27f08917228ded876af4472d4813e090dbd6141e2deb9f21793f&" alt="Power's Profile Image">
-    <h1>Hello, I'm <span>Power</span></h1>
-    <p>I help creators and communities thrive by building, managing, and growing professional Discord spaces that stay active and welcoming.</p>
-    <div class="buttons">
-      <a href="#contact">Get in Touch</a>
-      <a href="#services" class="secondary">See My Services</a>
-    </div>
-  </header>
+<!-- HERO -->
+<header>
+  <img src="https://cdn.discordapp.com/attachments/1405788974198296629/1466858220059361503/ca75ca1ab8d338ed603861f05833fa10.jpg" alt="Power">
+  <h1>Hello, I'm <span>Power</span></h1>
+  <p>I help creators and communities grow by managing professional, organized, and active Discord servers.</p>
+</header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>I’m Power, a Discord community manager focused on building structured, engaging, and safe environments for creators and their audiences.</p>
+  </div>
+</section>
+
+<!-- COMMUNITIES -->
+<section id="communities">
+  <h2>Communities</h2>
+  <div class="services-grid">
     <div class="card">
-      <p>I'm Power, a dedicated community manager focused on creating organized and engaging Discord servers. I help creators grow communities while keeping spaces active, safe, and fun.</p>
+      <h3>BasuPlays</h3>
+      <p>Minecraft-focused YouTuber community with active discussions.</p>
+      <p>Members: 30k+</p>
     </div>
-  </section>
-
-  <!-- COMMUNITIES -->
-  <section id="communities">
-    <h2>Communities</h2>
-    <div class="services-grid">
-      <div class="card">
-        <h3>BasuPlays</h3>
-        <p>A Minecraft community for the YouTuber BasuPlays with active discussions and events.</p>
-        <p>Members: 30k+</p>
-      </div>
-      <div class="card">
-        <h3>Venxion</h3>
-        <p>A small YouTuber’s community focused on gaming and collaboration with a tight-knit atmosphere.</p>
-        <p>Members: 11k+</p>
-      </div>
-      <div class="card">
-        <h3>DcWolfPlayz</h3>
-        <p>A big YouTuber with 30k+ subscribers. The server is active, fun, and well-organized.</p>
-        <p>Members: 3k+</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <h2>My Services</h2>
-    <p style="color:#cccccc; text-align:center; margin-bottom:1.5rem;">Complete Discord management solutions for creators and communities</p>
-    <div class="services-grid">
-      <div class="card">
-        <h3>Community Setup</h3>
-        <ul>
-          <li>Design server structure & channels</li>
-          <li>Role creation & hierarchy management</li>
-          <li>Bot integration and configuration</li>
-          <li>Optimized permissions & access control</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Moderation</h3>
-        <ul>
-          <li>24/7 server monitoring</li>
-          <li>Rule enforcement & conflict resolution</li>
-          <li>Anti-spam & security management</li>
-          <li>Member support & guidance</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Growth Strategy</h3>
-        <ul>
-          <li>Community engagement campaigns</li>
-          <li>Event planning & execution</li>
-          <li>Content planning & scheduling</li>
-          <li>Collaboration & partnerships</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Community Engagement</h3>
-        <ul>
-          <li>Daily interactions with members</li>
-          <li>Organizing fun and interactive events</li>
-          <li>Highlighting top contributors</li>
-          <li>Collecting feedback for improvements</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Consulting</h3>
-        <ul>
-          <li>Expert advice for growing communities</li>
-          <li>Problem solving & optimization</li>
-          <li>Best practices & server strategy</li>
-          <li>Long-term growth planning</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact Me</h2>
     <div class="card">
-      <p>Let’s collaborate to build a thriving and organized Discord community. Reach out and we’ll make it happen.</p>
-      <div class="buttons">
-        <a href="mailto:power@email.com">Email Me</a>
-        <a href="https://discord.com" class="secondary">Discord</a>
-      </div>
+      <h3>Venxion</h3>
+      <p>Small YouTuber community built around gaming and collaboration.</p>
+      <p>Members: 11k+</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>DcWolfPlayz</h3>
+      <p>Large YouTuber with 30k+ subscribers and an active fanbase.</p>
+      <p>Members: 3k+</p>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    © 2026 Power. All rights reserved.
-  </footer>
+<!-- SERVICES -->
+<section id="services">
+  <h2>My Services</h2>
+  <div class="services-grid">
+    <div class="card">
+      <h3>Community Setup</h3>
+      <ul>
+        <li>Server structure & channels</li>
+        <li>Roles & permissions</li>
+        <li>Bot setup</li>
+        <li>Security optimization</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Moderation</h3>
+      <ul>
+        <li>24/7 monitoring</li>
+        <li>Rule enforcement</li>
+        <li>Conflict handling</li>
+        <li>Member support</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Growth Strategy</h3>
+      <ul>
+        <li>Engagement ideas</li>
+        <li>Event planning</li>
+        <li>Content scheduling</li>
+        <li>Community growth</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="contact-box">
+    <h3>Let’s Work Together</h3>
+    <p>If you’re looking for a reliable Discord community manager, feel free to reach out.</p>
+
+    <p><strong>Email:</strong><br>
+      <a href="mailto:powerqrking2@gmail.com">powerqrking2@gmail.com</a>
+    </p>
+
+    <p><strong>Discord Server:</strong><br>
+      <a href="https://discord.gg/2ZzHtQEgqG" target="_blank">
+        https://discord.gg/2ZzHtQEgqG
+      </a>
+    </p>
+
+    <p style="margin-top:1.2rem;"><strong>Direct Contact</strong></p>
+    <p>Discord Username:<br>
+      <span style="color:#ffffff;">powergotfame_</span>
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Power. All rights reserved.
+</footer>
 
 </body>
 </html>

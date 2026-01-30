@@ -11,7 +11,7 @@
     * { margin:0; padding:0; box-sizing:border-box; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 
     body {
-      background: linear-gradient(135deg, #1b0b28, #3a005f);
+      background: linear-gradient(135deg,#0d0015,#2b001f);
       color: #f0e5ff;
       line-height:1.7;
     }
@@ -20,44 +20,46 @@
     nav {
       position: sticky;
       top: 0;
-      background: rgba(20, 0, 50, 0.9);
+      background: rgba(20, 0, 30, 0.95);
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
       z-index: 1000;
-      box-shadow: 0 0 15px #ff00ff88;
+      box-shadow: 0 0 5px #80008055;
     }
-    nav .logo { font-weight: bold; font-size: 1.5rem; color: #ff00ff; text-shadow: 0 0 10px #ff00ff; }
+    nav .logo { font-weight: bold; font-size: 1.5rem; color: #800080; }
     nav ul { display: flex; list-style:none; gap: 1.5rem; }
-    nav ul li a { color: #e0caff; text-decoration: none; font-weight: 500; transition: 0.3s; text-shadow: 0 0 5px #ff00ff88; }
-    nav ul li a:hover { color: #ff77ff; text-shadow: 0 0 12px #ff77ff; }
+    nav ul li a { color: #f0e5ff; text-decoration: none; font-weight: 500; transition: 0.3s; }
+    nav ul li a:hover { color: #ff4444; }
 
-    header { min-height:90vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:2rem; }
-    header h1 { font-size:3rem; margin-bottom:1rem; text-shadow: 0 0 15px #ff00ff; }
-    header span { color:#ff77ff; text-shadow: 0 0 20px #ff77ff; }
+    /* HERO */
+    header { min-height:90vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:2rem; }
+    header img { width:150px; height:150px; border-radius:50%; margin-bottom:1rem; object-fit:cover; border: 3px solid #800080; }
+    header h1 { font-size:3rem; margin-bottom:1rem; color:#ff4444; }
+    header span { color:#800080; }
     header p { max-width:600px; margin:auto; color:#d8baff; font-size:1.1rem; }
 
     section { max-width:1000px; margin:auto; padding:4rem 2rem; }
-    h2 { font-size:2.2rem; margin-bottom:1.5rem; color:#ff00ff; text-align:center; text-shadow: 0 0 10px #ff00ff; }
+    h2 { font-size:2.2rem; margin-bottom:1.5rem; color:#800080; text-align:center; }
     .card {
-      background: rgba(50,0,80,0.9);
+      background: rgba(50,0,50,0.85);
       padding:2rem;
       border-radius:18px;
-      box-shadow: 0 0 20px #ff00ffaa;
+      box-shadow: 0 0 10px #80008055;
       margin-bottom:2rem;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 0 40px #ff77ff; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 0 20px #ff444455; }
     ul { list-style:none; }
-    li { padding:0.8rem 0; border-bottom:1px solid #6a007f55; color:#e0caff; }
+    li { padding:0.8rem 0; border-bottom:1px solid #55005555; color:#d8baff; }
     li:last-child { border-bottom:none; }
 
-    .buttons a { display:inline-block; margin:1rem 0.5rem 0 0; padding:0.8rem 1.6rem; background:#ff00ff; color:#1b0b28; text-decoration:none; font-weight:600; border-radius:999px; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 0 10px #ff00ffaa; }
-    .buttons a.secondary { background:transparent; color:#ff77ff; border:2px solid #ff77ff; text-shadow: 0 0 5px #ff77ff; }
-    .buttons a:hover { transform:translateY(-2px); box-shadow:0 0 25px #ff77ff; }
+    .buttons a { display:inline-block; margin:1rem 0.5rem 0 0; padding:0.8rem 1.6rem; background:#800080; color:#1b0b28; text-decoration:none; font-weight:600; border-radius:999px; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 0 5px #80008055; }
+    .buttons a.secondary { background:transparent; color:#ff4444; border:2px solid #ff4444; }
+    .buttons a:hover { transform:translateY(-2px); box-shadow:0 0 10px #ff444455; }
 
-    footer { text-align:center; padding:2rem; color:#d8baff; font-size:0.9rem; text-shadow: 0 0 5px #ff77ff; }
+    footer { text-align:center; padding:2rem; color:#d8baff; font-size:0.9rem; }
 
     @media(max-width:600px){
       header h1{font-size:2.2rem;}
@@ -65,10 +67,9 @@
       nav ul {flex-direction: column; gap: 1rem;}
     }
 
-    /* GRID STYLES */
-    .services-grid, .communities-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:2rem;}
-    @media(max-width:1024px){.services-grid,.communities-grid{grid-template-columns:repeat(2,1fr);}}
-    @media(max-width:600px){.services-grid,.communities-grid{grid-template-columns:1fr;}}
+    .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:2rem;}
+    @media(max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -86,13 +87,12 @@
 
   <!-- HERO -->
   <header>
-    <div>
-      <h1>Hello, I'm <span>Power</span></h1>
-      <p>I help creators and communities thrive by building, managing, and growing professional Discord spaces that stay active and welcoming.</p>
-      <div class="buttons">
-        <a href="#contact">Get in Touch</a>
-        <a href="#services" class="secondary">See My Services</a>
-      </div>
+    <img src="your-image.jpg" alt="Power's Profile Image">
+    <h1>Hello, I'm <span>Power</span></h1>
+    <p>I help creators and communities thrive by building, managing, and growing professional Discord spaces that stay active and welcoming.</p>
+    <div class="buttons">
+      <a href="#contact">Get in Touch</a>
+      <a href="#services" class="secondary">See My Services</a>
     </div>
   </header>
 
@@ -100,28 +100,28 @@
   <section id="about">
     <h2>About Me</h2>
     <div class="card">
-      <p>I'm Power, a committed community manager with a passion for turning Discord servers into vibrant, well-organized spaces. I focus on creating engaging experiences for members while supporting creators in building sustainable online communities.</p>
+      <p>I'm Power, a committed community manager focused on creating organized and engaging Discord servers. My goal is to help creators grow their communities while maintaining an active, safe, and enjoyable space for members.</p>
     </div>
   </section>
 
   <!-- COMMUNITIES -->
   <section id="communities">
-    <h2>Communities I Manage</h2>
-    <div class="communities-grid">
+    <h2>Communities</h2>
+    <div class="services-grid">
       <div class="card">
-        <h3>Demon™ HQ</h3>
-        <p>A dedicated support hub for the Demon™ bot, helping users and developers collaborate effectively.</p>
-        <p>Discord Bot • 1K+ Members</p>
+        <h3>BasuPlays</h3>
+        <p>A Minecraft community for the YouTuber BasuPlays. Active discussions and events keep the members engaged.</p>
+        <p>Members: 30k+</p>
       </div>
       <div class="card">
-        <h3>Senpai Spider</h3>
-        <p>A lively Minecraft community surrounding the popular YouTuber, with active discussions and events.</p>
-        <p>Gaming • 290K+ Members</p>
+        <h3>Venxion</h3>
+        <p>A small YouTuber’s community with a focus on gaming, streaming, and collaboration. Great for tight-knit interactions.</p>
+        <p>Members: 11k+</p>
       </div>
       <div class="card">
-        <h3>ArtifyStudio</h3>
-        <p>A creative space for digital artists, designers, and enthusiasts to share their work and collaborate.</p>
-        <p>Art & Design • 1.2K+ Members</p>
+        <h3>DcWolfPlayz</h3>
+        <p>A big YouTuber with 30k+ subscribers. The server has an active, fun, and organized community.</p>
+        <p>Members: 3k+</p>
       </div>
     </div>
   </section>
